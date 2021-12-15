@@ -16,7 +16,7 @@ CREATE TABLE ExchangeRate (
 
 CREATE TABLE Log (
   id INT AUTO_INCREMENT  PRIMARY KEY ,
-  user VARCHAR(10),
+  user VARCHAR(50),
   method VARCHAR(10),
   resource VARCHAR(100),
   body VARCHAR(100),
