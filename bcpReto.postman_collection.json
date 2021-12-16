@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "43af9246-cdb8-4b19-b1ab-0a1cd2ea1ed4",
+		"name": "bcpReto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getExchange",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJiY3AiLCJhdXRob3JpdGllcyI6WyJST0xFX0VYQ0hBTkdFUiJdLCJpYXQiOjE2MzkzNDcxMDAsImV4cCI6MTYzOTM0NzcwMH0.Iuzl4SuKyk57NOFw3ZuCk3C3sZqULk6KvJ4884FF7mgiR-n6r3Wg3jbXLiJONRdqeC7Trva8R1G6oeulwFBi2g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-user-data",
+						"value": "eyJpZCI6MSwibmFtZSI6IkRhdmlkIFJhbWlyZXoiLCJlbWFpbCI6ImRhdmlkLnJhbWlyZXpAcmFwcGkuY29tIiwicHJvZmlsZV9waWMiOm51bGwsImNvdW50cnlfY29kZSI6IiIsInVzZXJfZW5hYmxlZCI6dHJ1ZSwiYWxlcnRfZW5hYmxlZCI6ZmFsc2UsInBlcm1pc3Npb25zIjpbXSwic3VwcGxpZXJzIjpbMSwyLDNdfQ==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 34,\r\n    \"originCurrency\": \"PEN\",\r\n    \"targetCurrency\": \"USD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/exchange/calculate",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exchange",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateExchange",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2Mzk1OTg5NTUsImlzcyI6Imh0dHBzOi8vd3d3LmJjcC5jb20vIiwic3ViIjoiYmNwIiwiZXhwIjoxNjQwNDYyOTU1fQ.wDsAui-jX8eIFgvYLd3jiwIVd1lxKSkSRAPGCPrKr4Sbe0lsqJXWEgTDFZb60syBmsBYVo7hsr3RaiPAXugJUg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-user-data",
+						"value": "eyJpZCI6MSwibmFtZSI6IkRhdmlkIFJhbWlyZXoiLCJlbWFpbCI6ImRhdmlkLnJhbWlyZXpAcmFwcGkuY29tIiwicHJvZmlsZV9waWMiOm51bGwsImNvdW50cnlfY29kZSI6IiIsInVzZXJfZW5hYmxlZCI6dHJ1ZSwiYWxlcnRfZW5hYmxlZCI6ZmFsc2UsInBlcm1pc3Npb25zIjpbXSwic3VwcGxpZXJzIjpbMSwyLDNdfQ==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"newRate\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/exchange/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exchange",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generateJwt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-user-data",
+						"value": "eyJpZCI6MSwibmFtZSI6IkRhdmlkIFJhbWlyZXoiLCJlbWFpbCI6ImRhdmlkLnJhbWlyZXpAcmFwcGkuY29tIiwicHJvZmlsZV9waWMiOm51bGwsImNvdW50cnlfY29kZSI6IiIsInVzZXJfZW5hYmxlZCI6dHJ1ZSwiYWxlcnRfZW5hYmxlZCI6ZmFsc2UsInBlcm1pc3Npb25zIjpbXSwic3VwcGxpZXJzIjpbMSwyLDNdfQ==",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"bcp\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newExchange",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2Mzk1OTg5NTUsImlzcyI6Imh0dHBzOi8vd3d3LmJjcC5jb20vIiwic3ViIjoiYmNwIiwiZXhwIjoxNjQwNDYyOTU1fQ.wDsAui-jX8eIFgvYLd3jiwIVd1lxKSkSRAPGCPrKr4Sbe0lsqJXWEgTDFZb60syBmsBYVo7hsr3RaiPAXugJUg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-user-data",
+						"value": "eyJpZCI6MSwibmFtZSI6IkRhdmlkIFJhbWlyZXoiLCJlbWFpbCI6ImRhdmlkLnJhbWlyZXpAcmFwcGkuY29tIiwicHJvZmlsZV9waWMiOm51bGwsImNvdW50cnlfY29kZSI6IiIsInVzZXJfZW5hYmxlZCI6dHJ1ZSwiYWxlcnRfZW5hYmxlZCI6ZmFsc2UsInBlcm1pc3Npb25zIjpbXSwic3VwcGxpZXJzIjpbMSwyLDNdfQ==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"originCurrency\": \"EUR\",\r\n    \"targetCurrency\": \"USD\",\r\n    \"rate\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/exchange/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exchange",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listExchange",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2Mzk1OTg5NTUsImlzcyI6Imh0dHBzOi8vd3d3LmJjcC5jb20vIiwic3ViIjoiYmNwIiwiZXhwIjoxNjQwNDYyOTU1fQ.wDsAui-jX8eIFgvYLd3jiwIVd1lxKSkSRAPGCPrKr4Sbe0lsqJXWEgTDFZb60syBmsBYVo7hsr3RaiPAXugJUg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-user-data",
+						"value": "eyJpZCI6MSwibmFtZSI6IkRhdmlkIFJhbWlyZXoiLCJlbWFpbCI6ImRhdmlkLnJhbWlyZXpAcmFwcGkuY29tIiwicHJvZmlsZV9waWMiOm51bGwsImNvdW50cnlfY29kZSI6IiIsInVzZXJfZW5hYmxlZCI6dHJ1ZSwiYWxlcnRfZW5hYmxlZCI6ZmFsc2UsInBlcm1pc3Npb25zIjpbXSwic3VwcGxpZXJzIjpbMSwyLDNdfQ==",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/exchange/?targetCurrency=USD",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exchange",
+						""
+					],
+					"query": [
+						{
+							"key": "targetCurrency",
+							"value": "USD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
